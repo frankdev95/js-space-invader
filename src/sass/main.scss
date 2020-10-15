@@ -1,0 +1,65 @@
+@import "base/animation";
+
+body {
+    background: black;
+    color: white;
+}
+
+.entity {
+    position: fixed;
+}
+
+.bullet {
+    background-color: white;
+    width: 4px;
+    height: 4px;
+}
+
+.game-over {
+    background-color: red;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+
+    &__text {
+        animation: dropInText 1.5s;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+
+    }
+
+    &__heading {
+        padding: 1rem 3rem;
+        background-color: darkred;
+        border-radius: 50px;
+        font-size: 3rem;
+
+        & span {
+            display: block;
+            &:nth-child(2) {
+                font-size: 1rem;
+            }
+
+        }
+
+        &:hover {
+            transform: translateY(-3px);
+        }
+
+        &:active {
+            transform: translateY(0);
+        }
+    }
+}
+
+.hide {
+    display: none;
+}
+
